@@ -13,7 +13,7 @@ const CardLogin = () => {
       title="Welcome back"
       emoji="👋"
       description="Sign in to your account"
-      className="shadow 
+      className="shadow-sm
                 md:items-center
                 md:mt-0
                 mt-16"
