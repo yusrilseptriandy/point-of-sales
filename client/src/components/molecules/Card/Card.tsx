@@ -23,7 +23,6 @@ const Card = ({
                 items-center
                 gap-5
                 flex
-                border
                 ${className}
                 `}
     >
