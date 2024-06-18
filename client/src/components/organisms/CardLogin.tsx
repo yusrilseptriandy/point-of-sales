@@ -23,7 +23,9 @@ const CardLogin = () => {
           <Input type="email" placeholder="Email address" />
         </div>
         <Input type="password" placeholder="Password" />
-        <Button type="submit">Login</Button>
+        <Button type="submit" className="rounded-3xl">
+          Login
+        </Button>
         <div className="flex justify-center gap-1 items-center">
           <p className="text-sm text-slate-600">Don't have an account? </p>
           <Link to="/register" className="text-biru text-sm font-bold">

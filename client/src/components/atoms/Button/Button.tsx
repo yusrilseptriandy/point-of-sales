@@ -8,19 +8,18 @@ interface buttonProps {
 
 const Button = ({
   onClick,
-  className = 'bg-biru active:bg-[#0d4576] text-white font-bold',
+  className,
   children,
   type,
   disabled,
 }: buttonProps) => {
   return (
     <button
-      className={`
+      className={`bg-biru active:bg-[#0d4576] text-white font-bold
                 px-4 
                 py-2 
                 w-full
                 h-11
-                rounded-lg
                 active:w-[99%]
                 ${className}`}
       onClick={onClick}
