@@ -18,7 +18,7 @@ const Card = ({
                 h-min
                 p-5
                 bg-white 
-                rounded-3xl
+                rounded-xl
                 flex-col
                 items-center
                 gap-5

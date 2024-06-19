@@ -19,7 +19,7 @@ const Input = ({
       placeholder={placeholder}
       value={value}
       className={`
-       rounded-xl
+       rounded-md
       px-4
       h-11 ${className}`}
       onChange={onChange}

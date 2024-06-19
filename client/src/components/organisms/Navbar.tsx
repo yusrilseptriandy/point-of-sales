@@ -36,6 +36,7 @@ const Navbar = () => {
                     bottom-0 
                     flex 
                     bg-white
+                    p-1
                     border-t-1
                     "
     >
@@ -45,7 +46,7 @@ const Navbar = () => {
           to={item.link}
           className={`w-full h-full flex flex-col items-center justify-center text-2xl gap-2  ${
             location.pathname === item.link
-              ? 'transition-all duration-300 bg-gradient-to-b from-biru/20 to-white text-biru  rounded border-biru'
+              ? ' scale-110 to-white text-biru'
               : 'text-slate-600'
           }`}
         >
