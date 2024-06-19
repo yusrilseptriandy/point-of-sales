@@ -20,7 +20,6 @@ const Button = ({
                 py-2 
                 w-full
                 h-11
-                active:w-[99%]
                 ${className}`}
       onClick={onClick}
       type={type}

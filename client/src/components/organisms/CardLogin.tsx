@@ -1,14 +1,29 @@
 import Card from '../molecules/Card/Card';
 import Input from '../atoms/Input/Input';
 import Button from '../atoms/Button/Button';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import React, { useState } from 'react';
+import toast, { Toaster } from 'react-hot-toast';
 
 const CardLogin = () => {
   const [inputEmail, setInputEmail] = useState<string>('');
-  const handleLogin = (e: React.FormEvent<HTMLFormElement>) => {
+  const [password, setPassword] = useState<string>('');
+
+  const navigate = useNavigate();
+
+  const user = {
+    username: 'ysl@ny.com',
+    password: '1',
+  };
+
+  const handleLogin = (e: React.FormEvent) => {
     e.preventDefault();
-    console.log('login');
+    if (inputEmail === user.username && password === user.password) {
+      toast.success('Success login!');
+      setTimeout(() => navigate('/'), 2000);
+    } else {
+      toast.error('Wrong email or password!');
+    }
   };
 
   return (
@@ -23,13 +38,26 @@ const CardLogin = () => {
                 mt-16"
     >
       <form onSubmit={handleLogin} className="gap-5 flex flex-col w-full">
+        <Toaster
+          toastOptions={{
+            className: '',
+            style: {
+              padding: '12px',
+              fontWeight: 'bold',
+              backgroundColor: 'rgb(244 244 245)',
+              boxShadow:
+                ' 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);',
+              borderRadius: '50px',
+            },
+          }}
+        />
         <div className="w-full flex items-center">
           {inputEmail.length > 0 && inputEmail.includes('@') ? (
             <Input
               type="email"
               placeholder="Email address"
               value={inputEmail}
-              className="bg-green-100 text-green-700 font-bold  border-2 border-green-500 focus:outline-biru w-full"
+              className="bg-green-100 text-green-700 font-bold  border-2 border-green-500 focus:outline-biru w-full duration-150"
               onChange={(e) => setInputEmail(e.target.value)}
             />
           ) : (
@@ -41,8 +69,13 @@ const CardLogin = () => {
             />
           )}
         </div>
-        <Input type="password" placeholder="Password" />
-        <Button type="submit" className="rounded-3xl">
+        <Input
+          type="password"
+          placeholder="Password"
+          value={password}
+          onChange={(e) => setPassword(e.target.value)}
+        />
+        <Button type="submit" className="rounded-3xl active:scale-95">
           Login
         </Button>
         <div className="flex justify-center gap-1 items-center">
