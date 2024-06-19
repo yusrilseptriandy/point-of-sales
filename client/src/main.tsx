@@ -1,14 +1,29 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import App from './App.tsx';
 import './index.css';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import Login from './components/pages/Login.tsx';
+import Home from './components/pages/Home.tsx';
+import Products from './components/pages/Products.tsx';
+import History from './components/pages/History.tsx';
+import Profile from './components/pages/Profile.tsx';
 
 const router = createBrowserRouter([
   {
     path: '/',
-    element: <App />,
+    element: <Home />,
+  },
+  {
+    path: '/products',
+    element: <Products />,
+  },
+  {
+    path: '/history',
+    element: <History />,
+  },
+  {
+    path: '/profile',
+    element: <Profile />,
   },
   {
     path: '/login',

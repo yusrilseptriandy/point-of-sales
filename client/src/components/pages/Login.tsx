@@ -8,7 +8,8 @@ const Login = () => {
             w-full
             h-screen
             justify-center
-            bg-white
+            md:items-center
+            bg-zinc-100
             p-5"
     >
       <CardLogin />

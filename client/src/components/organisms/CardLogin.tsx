@@ -18,6 +18,12 @@ const CardLogin = () => {
 
   const handleLogin = (e: React.FormEvent) => {
     e.preventDefault();
+
+    if (inputEmail === '' || password === '') {
+      toast.error('Email and password cannot be empty!');
+      return;
+    }
+
     if (inputEmail === user.username && password === user.password) {
       toast.success('Success login!');
       setTimeout(() => navigate('/'), 2000);
@@ -31,9 +37,7 @@ const CardLogin = () => {
       title="Welcome back"
       emoji="👋"
       description="Sign in to your account"
-      className="shadow
-                border
-                md:items-center
+      className="md:items-center
                 md:mt-0
                 mt-16"
     >
@@ -44,9 +48,8 @@ const CardLogin = () => {
             style: {
               padding: '12px',
               fontWeight: 'bold',
-              backgroundColor: 'rgb(244 244 245)',
               boxShadow:
-                ' 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);',
+                '0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1)',
               borderRadius: '50px',
             },
           }}
