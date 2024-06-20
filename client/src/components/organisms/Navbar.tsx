@@ -36,6 +36,7 @@ const Navbar = () => {
                     fixed 
                     bottom-0 
                     flex 
+                    border-t
                     bg-white
                     p-1
                     border-t-1
@@ -45,9 +46,9 @@ const Navbar = () => {
         <Link
           key={index}
           to={item.link}
-          className={`w-full h-full flex flex-col items-center justify-center text-2xl gap-2  ${
+          className={`w-full h-full flex flex-col items-center justify-center text-2xl gap-1  ${
             location.pathname === item.link
-              ? ' scale-110 to-white text-biru'
+              ? 'text-biru scale-105'
               : 'text-slate-600'
           }`}
         >

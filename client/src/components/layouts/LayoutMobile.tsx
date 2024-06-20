@@ -9,11 +9,11 @@ const LayoutMobile = ({ children }: LayoutMobileProps) => {
                  flex-col
                  w-full
                  h-screen
-                 bg-zinc-100
                  md:hidden
                  lg:hidden
                  xl:hidden
-                 2xl:hidden"
+                 2xl:hidden
+"
     >
       {children}
     </div>

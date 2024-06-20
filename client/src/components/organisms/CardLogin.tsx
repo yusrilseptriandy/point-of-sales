@@ -34,13 +34,18 @@ const CardLogin = () => {
 
   return (
     <Card
-      title="Welcome back"
-      emoji="👋"
-      description="Sign in to your account"
       className="md:items-center
                 md:mt-0
-                mt-16"
+                mt-16
+                gap-5"
     >
+      <h1 className="text-3xl font-extrabold tracking-tight flex gap-1">
+        Welcome back
+        <p className="animate-pulse">👋</p>
+      </h1>
+      <p className="text-slate-500 text-sm font-semibold ">
+        Sign in to your account
+      </p>
       <form onSubmit={handleLogin} className="gap-5 flex flex-col w-full">
         <Toaster
           toastOptions={{

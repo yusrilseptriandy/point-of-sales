@@ -5,6 +5,7 @@ const History = () => {
   return (
     <>
       <LayoutMobile>
+        <div className="w-full h-screen bg-slate-100"> History</div>
         <Navbar />
       </LayoutMobile>
     </>
