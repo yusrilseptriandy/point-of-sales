@@ -1,7 +1,8 @@
-import { BiHomeCircle, BiPackage } from 'react-icons/bi';
-import { TbCheckupList, TbUser } from 'react-icons/tb';
-import { Link, useLocation } from 'react-router-dom';
+import { AiFillHome } from 'react-icons/ai';
+import { PiNotepadFill } from 'react-icons/pi';
+import { RiBox1Fill, RiUser3Fill } from 'react-icons/ri';
 
+import { Link, useLocation } from 'react-router-dom';
 const Navbar = () => {
   const location = useLocation();
 
@@ -9,22 +10,22 @@ const Navbar = () => {
     {
       title: 'Home',
       link: '/',
-      icon: <BiHomeCircle />,
+      icon: <AiFillHome />,
     },
     {
       title: 'Products',
       link: '/products',
-      icon: <BiPackage />,
+      icon: <RiBox1Fill />,
     },
     {
       title: 'history',
       link: '/history',
-      icon: <TbCheckupList />,
+      icon: <PiNotepadFill />,
     },
     {
       title: 'Profile',
       link: '/profile',
-      icon: <TbUser />,
+      icon: <RiUser3Fill />,
     },
   ];
 

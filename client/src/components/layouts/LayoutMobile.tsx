@@ -15,7 +15,6 @@ const LayoutMobile = ({ children }: LayoutMobileProps) => {
                  xl:hidden
                  2xl:hidden"
     >
-      <section className="w-full h-full">home</section>
       {children}
     </div>
   );
