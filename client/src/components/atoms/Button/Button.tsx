@@ -11,8 +11,10 @@ const Button = ({
   className,
   children,
   type,
-  disabled,
+  disabled = false,
 }: buttonProps) => {
+  const disableBtn =
+    disabled === true ? 'bg-slate-400 active:bg-slate-400' : '';
   return (
     <button
       className={`bg-biru active:bg-[#0d4576] text-white font-bold
@@ -20,7 +22,7 @@ const Button = ({
                 py-2 
                 w-full
                 h-11
-                ${className}`}
+                ${className} ${disableBtn}`}
       onClick={onClick}
       type={type}
       disabled={disabled}

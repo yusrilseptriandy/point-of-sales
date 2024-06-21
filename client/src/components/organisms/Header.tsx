@@ -8,7 +8,7 @@ const Header = ({ children, border = 'none' }: HeaderProps) => {
     border === 'bottom' ? 'border-b' : border === 'top' ? 'border-t' : '';
   return (
     <header
-      className={`w-full h-16 bg-white p-3 flex items-center justify-center ${borderStyle}`}
+      className={`w-full h-16 bg-white p-3 flex items-center ${borderStyle}`}
     >
       {children}
     </header>

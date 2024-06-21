@@ -1,0 +1,44 @@
+[
+  {
+    "id": 1,
+    "name": "Hot Bali Kintamani",
+    "price": 21000,
+    "img": "https://static.fore.coffee/product/COD_satuan-03.jpg"
+  },
+  {
+    "id": 2,
+    "name": "Butterscotch Sea Salt Latte 1L",
+    "price": 25000,
+    "img": "https://static.fore.coffee/product/butterscotchssl1l1402.jpg"
+  },
+  {
+    "id": 3,
+    "name": "Cappuccino 1L",
+    "price": 20000,
+    "img": "https://static.fore.coffee/product/COD_satuan-01.jpg"
+  },
+  {
+    "id": 4,
+    "name": "Caramel Latte 1L",
+    "price": 20000,
+    "img": "https://static.fore.coffee/product/COD_satuan-02.jpg"
+  },
+  {
+    "id": 5,
+    "name": "Caramel Macchiato 1L",
+    "price": 20000,
+    "img": "https://static.fore.coffee/product/COD_satuan-01.jpg"
+  },
+  {
+    "id": 6,
+    "name": "Caramel Frappe 1L",
+    "price": 20000,
+    "img": "https://static.fore.coffee/product/COD_satuan-03.jpg"
+  },
+  {
+    "id": 7,
+    "name": "Caramel Macchiato 1L",
+    "price": 20000,
+    "img": "https://static.fore.coffee/product/butterscotchssl1l1402.jpg"
+  }
+]

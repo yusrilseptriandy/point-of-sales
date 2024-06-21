@@ -7,6 +7,7 @@ import Home from './components/pages/Home.tsx';
 import Products from './components/pages/Products.tsx';
 import History from './components/pages/History.tsx';
 import Profile from './components/pages/Profile.tsx';
+import Transaction from './components/pages/Transaction.tsx';
 
 const router = createBrowserRouter([
   {
@@ -28,6 +29,10 @@ const router = createBrowserRouter([
   {
     path: '/login',
     element: <Login />,
+  },
+  {
+    path: '/transaction',
+    element: <Transaction />,
   },
 ]);
 

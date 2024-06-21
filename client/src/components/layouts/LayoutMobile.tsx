@@ -8,11 +8,7 @@ const LayoutMobile = ({ children }: LayoutMobileProps) => {
       className="flex
                  flex-col
                  w-full
-                 h-screen
-                 md:hidden
-                 lg:hidden
-                 xl:hidden
-                 2xl:hidden
+                 h-screen  
 "
     >
       {children}
