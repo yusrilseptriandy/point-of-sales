@@ -1,6 +1,11 @@
-import { AiFillHome } from 'react-icons/ai';
-import { PiNotepadFill } from 'react-icons/pi';
-import { RiBox1Fill, RiUser3Fill } from 'react-icons/ri';
+import { GoHome, GoHomeFill } from 'react-icons/go';
+import { PiNotepad, PiNotepadFill } from 'react-icons/pi';
+import {
+  RiBox1Fill,
+  RiBox1Line,
+  RiUser3Fill,
+  RiUser3Line,
+} from 'react-icons/ri';
 
 import { Link, useLocation } from 'react-router-dom';
 const Navbar = () => {
@@ -10,22 +15,26 @@ const Navbar = () => {
     {
       title: 'Home',
       link: '/',
-      icon: <AiFillHome />,
+      icon: <GoHome style={{ stroke: 'GrayText', strokeWidth: '0.5' }} />,
+      iconActive: <GoHomeFill />,
     },
     {
       title: 'Products',
       link: '/products',
-      icon: <RiBox1Fill />,
+      icon: <RiBox1Line />,
+      iconActive: <RiBox1Fill />,
     },
     {
       title: 'history',
       link: '/history',
-      icon: <PiNotepadFill />,
+      icon: <PiNotepad style={{ stroke: 'GrayText', strokeWidth: '5' }} />,
+      iconActive: <PiNotepadFill />,
     },
     {
       title: 'Profile',
       link: '/profile',
-      icon: <RiUser3Fill />,
+      icon: <RiUser3Line />,
+      iconActive: <RiUser3Fill />,
     },
   ];
 
@@ -37,9 +46,9 @@ const Navbar = () => {
                     bottom-0 
                     flex 
                     border-t
-                    bg-white
                     p-1
-                    border-t-1
+                    border-t-1 
+                    bg-white
                     "
     >
       {navItems.map((item, index) => (
@@ -47,12 +56,10 @@ const Navbar = () => {
           key={index}
           to={item.link}
           className={`w-full h-full flex flex-col items-center justify-center text-2xl gap-1  ${
-            location.pathname === item.link
-              ? 'text-biru scale-105'
-              : 'text-slate-600'
+            location.pathname === item.link ? 'text-biru' : 'text-slate-600'
           }`}
         >
-          {item.icon}
+          {location.pathname === item.link ? item.iconActive : item.icon}
           <p className="text-xs font-bold ">{item.title}</p>
         </Link>
       ))}

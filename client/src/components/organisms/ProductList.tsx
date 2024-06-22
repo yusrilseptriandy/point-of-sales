@@ -16,26 +16,24 @@ const ProductList = () => {
   const [search, setSearch] = useState<string>('');
 
   const handleSearchChange = useCallback(
-    (e: React.ChangeEvent<HTMLInputElement>) => {
-      setSearch(e.target.value);
+    (event: React.ChangeEvent<HTMLInputElement>) => {
+      setSearch(event.target.value);
     },
     []
   );
 
   useEffect(() => {
-    fetch('src/data/products.json')
-      .then((res) => res.json())
-      .then((data) => {
-        let filteredProduct = data;
-
-        if (search) {
-          filteredProduct = data.filter((item: ProductResponse) =>
+    const fetchData = async () => {
+      const response = await fetch('src/data/products.json');
+      const data = await response.json();
+      const filteredData = search
+        ? data.filter((item: ProductResponse) =>
             item.name.toLowerCase().includes(search.toLowerCase())
-          );
-        }
-
-        setProduct(filteredProduct);
-      });
+          )
+        : data;
+      setProduct(filteredData);
+    };
+    fetchData();
   }, [search]);
 
   // console.log(product);
@@ -43,16 +41,14 @@ const ProductList = () => {
   return (
     <>
       <Header>
-        <div className="w-full h-11 rounded-xl flex justify-center items-center pl-2 border-[1.5px]">
-          <div>
-            <IoSearch className="text-xl text-slate-400" />
-          </div>
+        <div className="w-full h-11 rounded-full bg-white pl-3 border-[1.5px] border-slate-300 flex items-center">
+          <IoSearch className="text-xl text-slate-400" />
           <Input
             type="search"
             placeholder="Search your product..."
             onChange={handleSearchChange}
             value={search}
-            className="w-[90%] focus:outline-none bg-transparent"
+            className="w-full focus:outline-none h-full bg-transparent mb-1 "
           />
         </div>
       </Header>
@@ -65,7 +61,7 @@ const ProductList = () => {
       <div className="w-full h-min scroll-smooth p-3 mb-16 overflow-y-auto scroll-bar flex flex-col gap-2">
         {product.map((item) => (
           <div
-            className="w-full h-28 rounded-2xl p-1 pr-3 flex gap-5 border"
+            className="w-full h-28 rounded-2xl p-1 pr-3 flex gap-5 cursor-pointer bg-white"
             key={item.id}
           >
             <img

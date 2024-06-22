@@ -14,7 +14,7 @@ const TransactionBtn = () => {
         className="fixed flex gap-1 bottom-20 w-min rounded-full shadow-xl active:scale-95"
       >
         <p>2</p>
-        <h1>Transaction</h1>
+        <h1>Items</h1>
       </Button>
     </div>
   );

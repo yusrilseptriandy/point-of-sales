@@ -5,6 +5,7 @@ export default {
     extend: {
       colors: {
         biru: '#0267c1',
+        abu: '#494b4a',
       },
     },
   },
