@@ -26,7 +26,12 @@ const Transaction = () => {
             <div className="flex justify-between">
               <div>
                 <h1 className="font-bold">Latte</h1>
-                <p>2x</p>
+                <div className="flex gap-3">
+                  <p>2x</p>
+                  <button className="text-rose-700 font-bold active:scale-95">
+                    Delete
+                  </button>
+                </div>
               </div>
               <span>Rp.21.000</span>
             </div>
@@ -34,7 +39,12 @@ const Transaction = () => {
             <div className="flex justify-between">
               <div>
                 <h1 className="font-bold">Latte</h1>
-                <p>2x</p>
+                <div className="flex gap-3">
+                  <p>2x</p>
+                  <button className="text-rose-700 font-bold active:scale-95">
+                    Delete
+                  </button>
+                </div>
               </div>
               <span>Rp.21.000</span>
             </div>
@@ -42,7 +52,12 @@ const Transaction = () => {
             <div className="flex justify-between">
               <div>
                 <h1 className="font-bold">Latte</h1>
-                <p>2x</p>
+                <div className="flex gap-3">
+                  <p>2x</p>
+                  <button className="text-rose-700 font-bold active:scale-95">
+                    Delete
+                  </button>
+                </div>
               </div>
               <span>Rp.21.000</span>
             </div>
