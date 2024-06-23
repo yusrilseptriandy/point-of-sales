@@ -2,7 +2,7 @@ import { useEffect, useState, useCallback } from 'react';
 import Input from '../atoms/Input/Input'; // Pastikan path import yang benar
 import Header from './Header';
 import { IoSearch } from 'react-icons/io5';
-import CardStok from './CardStok';
+// import CardStok from './CardStok';
 
 interface ProductResponse {
   id: number;
@@ -40,7 +40,7 @@ const ProductList = () => {
 
   return (
     <>
-      <Header>
+      <Header border="bottom">
         <div className="w-full h-11 rounded-full bg-white pl-3 border-[1.5px] border-slate-300 flex items-center">
           <IoSearch className="text-xl text-slate-400" />
           <Input
@@ -52,11 +52,11 @@ const ProductList = () => {
           />
         </div>
       </Header>
-
+      {/* 
       <div className="w-full h-min flex p-3 gap-2  justify-center ">
         <CardStok amount={0} describe="items out of stock" />
         <CardStok amount={10} describe="Transaction " variant="blue" />
-      </div>
+      </div> */}
 
       <div className="w-full h-min scroll-smooth p-3 mb-16 overflow-y-auto scroll-bar flex flex-col gap-2">
         {product.map((item) => (

@@ -61,13 +61,13 @@ const Transaction = () => {
         </main>
       </div>
 
-      <footer className="w-full h-min p-2 flex flex-col items-end justify-end gap-2 sticky bottom-0 bg-slate-100 px-3 pt-5 rounded-2xl">
+      <footer className="w-full h-min p-2 flex flex-col items-end justify-end gap-2 sticky bottom-0 bg-white border-t shadow px-3 pt-5 rounded-2xl">
         <div className="flex flex-col items-center w-full h-min gap-2">
           <Input
             type="number"
             placeholder="Enter amount"
             label="Enter the buyer's money"
-            className="focus:outline-none w-full font-bold rounded-2xl"
+            className="focus:outline-none w-full font-bold rounded-lg bg-slate-100"
           />
           <div className="w-full">
             <span className="text-sm text-slate-600 font-bold">Change</span>
