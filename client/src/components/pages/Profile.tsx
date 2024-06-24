@@ -18,9 +18,9 @@ const Profile = () => {
         <div className="w-full h-screen bg-white p-3">
           <div className="h-min flex flex-col items-center justify-center gap-3">
             <img
-              src="https://via.placeholder.com/150"
+              src="https://photosbull.com/wp-content/uploads/2024/05/no-dp_16.webp"
               alt=""
-              className="w-28 h-28 rounded-full"
+              className="w-24 h-24 rounded-full"
             />
             <h1 className="text-2xl font-bold tracking-tighter">your name</h1>
           </div>
@@ -60,7 +60,7 @@ const Profile = () => {
             </Link>
 
             <Link
-              to="/account"
+              to="/add-product"
               className="w-full h-16 border-b flex items-center justify-between"
             >
               <div className="flex gap-3 justify-between">
@@ -71,7 +71,7 @@ const Profile = () => {
               <FaChevronRight className="text-abu" />
             </Link>
 
-            <Button className="w-full h-12 rounded-full bg-rose-600 mt-6 active:bg-rose-700 active:scale-95">
+            <Button className="w-full h-12 rounded-full bg-rose-600 mt-6 active:bg-rose-700 active:scale-95 text-white">
               <div className="w-full h-full flex items-center gap-3 justify-center">
                 <BiLogOut className="text-2xl" />
                 Logout

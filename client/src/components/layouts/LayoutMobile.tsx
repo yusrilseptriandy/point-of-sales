@@ -9,7 +9,7 @@ const LayoutMobile = ({ children }: LayoutMobileProps) => {
                  flex-col
                  w-full
                  h-screen
-                 bg-slate-100
+                 bg-white
 "
     >
       {children}

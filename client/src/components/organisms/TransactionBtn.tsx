@@ -11,7 +11,7 @@ const TransactionBtn = () => {
     <div className="flex justify-center items-center">
       <Button
         onClick={handleButtonClick}
-        className="fixed flex gap-1 bottom-20 w-min rounded-full shadow-xl active:scale-95"
+        className="text-white fixed flex gap-1 bottom-20 w-min rounded-full shadow-xl active:scale-95"
       >
         <p>2</p>
         <h1>Items</h1>

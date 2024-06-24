@@ -1,8 +1,9 @@
-import { IoMdArrowRoundBack, IoMdArrowRoundForward } from 'react-icons/io';
+import { IoMdArrowRoundBack } from 'react-icons/io';
 import Header from '../organisms/Header';
 import { useNavigate } from 'react-router-dom';
 import Button from '../atoms/Button/Button';
 import Input from '../atoms/Input/Input';
+import { HiCheckCircle } from 'react-icons/hi';
 
 const Transaction = () => {
   const navigate = useNavigate();
@@ -92,9 +93,9 @@ const Transaction = () => {
           </div>
         </div>
 
-        <Button className="w-10/12 h-12 rounded-full flex justify-center items-center gap-1 mt-3">
-          <p>Next</p>
-          <IoMdArrowRoundForward className="text-xl" />
+        <Button className="w-10/12 h-12 rounded-full flex justify-center items-center gap-1 mt-3 text-white">
+          <p>Confirm</p>
+          <HiCheckCircle className="text-xl" />
         </Button>
       </footer>
     </div>
